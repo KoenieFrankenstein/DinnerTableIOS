@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, inital-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="stylesheets/alleGerechten.css">
+    <link rel="stylesheet" href="stylesheets/suggesties.css">
+    <link rel="stylesheet" href="stylesheets/table.css">
+    <link rel="stylesheet" href="stylesheets/header.css">
+</head>
+<!--    TODO: 3 random gerechten uit de database automatisch in het rad zetten
+        TODO: Slots anders verwoorden
+        TODO: Suggesties image left&right een extra margin ofzo toevoegen. 
+        (dan kan je zorgen dat de buitenste ook in t midden staan)
+        TODO: IOS
+        TODO: Back-end anders inrichten (kotlin)
+-->
+
+<body>
+    <div>
+        <div class="buttonDiv">
+            <!-- Header / switch -->
+            <button class="switchButtonActive" onclick="switchSuggesties()" id="suggestieBtn">Suggesties</button>
+            <button class="switchButton" onclick="switchGerechten()" id="gerechtenBtn">Alle gerechten</button>
+        </div>
+        <div class="gerechten" id="gerechten" style="display: none;">
+            <!-- gerechten pagina-->
+            <div class="line">
+                <div class="search">
+                    <input type="text" id="searchField" class="searchBar" placeholder="Zoek een gerecht">
+                    <img src="images/plusBtn.png" alt="plus knop" class="addFoodBtn" id="addFoodBtn" onclick="addFood()">
+                </div>
+            </div>
+            <div class="tableDiv">
+                <!-- <table class="gerechtenLijst"></table> -->
+                <div id="gerechtenContent">
+                </div>
+            </div>
+            <div class="addFoodDiv" id="addFoodDiv">
+                <button class="closeAddFood" id="closeAddFood" onclick="closeAddFood()">x</button>
+                <h4 class="addFoodText">Voeg een gerecht toe aan uw lijst</h4>
+                <input type="text" name="addFoodBar" id="addFoodBar" class="addFoodBar" placeholder="Voeg een gerecht toe">
+                <button class="confirmAdd" id="confirmAdd" onclick="addFoodConfirm()">Toevoegen</button>
+            </div>
+            <div class="editFoodDivDown" id="editFoodDiv">
+                <h2 class="editTitle">Gerecht Bewerken</h2>
+
+                <div class="row inputDiv">
+                    <label class="label">Naam van het gerecht*</label><br>
+                    <input type="text" class="gerechtInput editInput" id="gerecht" readonly>
+                </div>
+                <table class="tastyHealthyTable">
+                    <tr>
+                        <td style="width: 50%;">
+                            <div class="inputHealthy">
+                                <label class="label">Healthy*</label><br>
+                                <input type="number" class="numberScale" onblur="checkNumber(this)" id="health">
+                                <label class="maxNumberLabel">/10</label>
+                            </div>
+                        </td>
+                        <td style="width: 50%;">
+                            <div class="inputTasty">
+                                <label class="label">Tasty*</label><br>
+                                <input type="number" class="numberScale" onblur="checkNumber(this)" id="taste">
+                                <label class="maxNumberLabel">/10</label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="row inputDiv">
+                    <label class="label">Laatst gegeten*</label>
+                    <input type="date" class="editDateInput editInput" id="date">
+                </div>
+                <div class="row inputDiv">
+                    <label class="label">Opmerkingen</label>
+                    <textarea class="editInput" cols="30" rows="10" id="notes"></textarea>
+                </div>
+                <div class="row inputDiv">
+                    <label class="label">Keuken</label>
+                    <input type="text" class="editInput" id="keuken">
+                </div>
+                <div class="noteLabel">
+                    <label>Velden met een * zijn verplicht</label>
+                </div>
+                <div class="cancelSaveDiv">
+                    <button class="cancelEdit" onclick="cancel()">Annuleren</button>
+                    <button class="saveEdit" onclick="saveChanges()">Opslaan</button>
+                </div>
+
+            </div>
+        </div>
+        <!-- De suggesties pagina -->
+        <div class="suggesties" id="suggesties">
+            <div class="fortuneDiv">
+                <div class="wheelDiv" id="wheelDiv">
+                    <img src="images/editIcon.png" id="show" onclick="show()">
+                    <div id="chart">
+                        <label id="etenVraag">Wat eten we vanavond?</label><br><br>
+                        <label id="label"></label><br>
+                        <label id="clickWheel">Klik om te draaien</label>
+                        <div class="triangle" id="triangle"></div>
+                    </div>
+
+                </div>
+
+                <div class="editDiv" id="editDiv">
+                    <h3 class="editWheelTitle">Draairad bewerken</h3>
+
+                    <div class="maxMinDiv">
+                        <p class="maxMin">Minimaal aantal gerechten: 3</p>
+                        <p class="maxMin">Maximaal aantal gerechten: 10</p>
+                    </div>
+
+                    <label id="label">Huidig aantal gerechten</label>
+                    <button id="minButton" onclick="editMinus()">-</button>
+                    <label id="amount"></label>
+                    <button id="plusButton" onclick="editPlus()">+</button><br><br>
+                    <label class="maxTekensText" id="maxTekensText">Maximale aantal tekens bereikt</label>
+                    <div id="container"></div><br>
+                    <button id="annulerenBtn" onclick="annuleren()">Annuleren</button>
+                    <button id="changeSlots" onclick="changeSlots()">Opslaan</button>
+                </div>
+            </div>
+            <!-- Suggesties images slider -->
+            <div class="suggestiesImages" id="suggestiesImages">
+                <div class="moreSuggestionsDiv" onclick="scrollDown()">
+                    <label class="moreSuggestions">Meer suggesties</label><br>
+                    <img class="arrowDown" src="images/iconArrowDown.png" alt="Arrow down">
+                </div>
+                <div class="gradientDiv">
+                    <div class="leftGradient"></div>
+                    <div class="rightGradient"></div>
+                    <div class="slider">
+                        <div class="slides">
+                            <div class="first">hi</div>
+                            <div class="fifth">
+                                <img src="images/bami.png" class="imgHolder">
+                                <div class="textContainer">
+                                    <p class="boven">Title</p>
+                                    <p class="onder">Dish</p>
+                                </div>
+
+                            </div>
+                            <div class="fifth">
+                                <img src="images/shoarma.jpeg" class="imgHolder">
+                                <div class="textContainer">
+                                    <p class="boven">Title</p>
+                                    <p class="onder">Dish</p>
+                                </div>
+                            </div>
+                            <div class="fifth">
+                                <img src="images/ceasarSalad.jpg" class="imgHolder">
+                                <div class="textContainer">
+                                    <p class="boven">Title</p>
+                                    <p class="onder">Dish</p>
+                                </div>
+                            </div>
+                            <div class="fifth">
+                                <img src="images/lasagne.jpg" class="imgHolder">
+                                <div class="textContainer">
+                                    <p class="boven">Title</p>
+                                    <p class="onder">Dish</p>
+                                </div>
+                            </div>
+                            <div class="fifth">
+                                <img src="images/risotto.jpg" class="imgHolder">
+                                <div class="textContainer">
+                                    <p class="boven">Title</p>
+                                    <p class="onder">Dish</p>
+                                </div>
+                            </div>
+                            <div class="last">hi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--!! firebase stuff  -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBJaWwzG5HTWIXOxywshVpRRHo1i4Gey8s",
+            authDomain: "dinnertable-56c1c.firebaseapp.com",
+            databaseURL: "https://dinnertable-56c1c.firebaseio.com",
+            projectId: "dinnertable-56c1c",
+            storageBucket: "dinnertable-56c1c.appspot.com",
+            messagingSenderId: "297554476203",
+            appId: "1:297554476203:web:928e5939d0765ad2658bee",
+            measurementId: "G-MSFBS5XHBR"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        // Get a reference to the database service
+        var database = firebase.database();
+        //Get a reference to the firestore service
+        var db = firebase.firestore()
+    </script>
+    <!--!! end of firebase stuff  -->
+</body>
+
+<script src="scripts/main.js" defer></script>
+<script src="scripts/addFood.js" defer></script>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="scripts/stw.js" defer></script>
+<script src="scripts/editFood.js" defer></script>
+<link rel="stylesheet" href="stylesheets/stw.css">
+
+</html>

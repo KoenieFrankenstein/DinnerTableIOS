@@ -1,0 +1,199 @@
+text {
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: lighter;
+    pointer-events: none;
+    color: #3C3C3D;
+}
+
+#chart {
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+}
+
+#label {
+    color: #3C3C3D;
+    font-size: 18px;
+    font-family: Arial;
+    display: inline;
+}
+
+#plusButton,
+#minButton {
+    width: 25px;
+    height: 25px;
+}
+
+#plusButton,
+#minButton,
+#changeSlots,
+#annulerenBtn {
+    color: white;
+    border: none;
+    background: #8CCA73;
+    border-radius: 4px;
+    display: inline;
+    font-size: 18px;
+    font-family: Arial;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.10);
+}
+
+#changeSlots,
+#annulerenBtn {
+    height: 24px;
+    width: 100px;
+}
+
+.editWheelTitle {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.maxMin {
+    font-size: 11px;
+    font-weight: 100;
+    color: #707070;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.maxMinDiv {
+    margin-bottom: 10px;
+}
+
+.gerecht123 {
+    background: #DDECD7;
+    border-radius: 4px;
+    height: 25px;
+    padding: 5px;
+    font-size: 18px;
+    font-family: Arial;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+    max-width: 40%;
+}
+
+.stwInput {
+    border: none;
+    background: white;
+    border-radius: 4px;
+    margin-left: 2px;
+    margin-bottom: 8px;
+    /* padding: 5px; */
+    height: 25px;
+    font-size: 18px;
+    font-family: Arial;
+    width: 60%;
+    height: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
+}
+
+#container {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: auto;
+}
+
+#show {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    left: 20px;
+    float: left;
+    top: 60px;
+}
+
+.editDiv {
+    width: 90%;
+    height: 100%;
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+
+.wheelDiv {
+    margin-top: -8%;
+}
+
+#etenVraag {
+    margin-top: 80px;
+    color: #3C3C3D;
+    font-size: 18px;
+}
+
+.fortuneDiv {
+    margin-top: 70px;
+}
+
+#clickWheel {
+    z-index: 5;
+    color: #3C3C3D;
+    font-size: 15px;
+    font-family: Arial;
+    position: absolute;
+    text-align: center;
+    opacity: 75%;
+    left: 50%;
+    pointer-events: none;
+    margin-top: 140px;
+    border: 1px solid #DDECD7;
+    background-color: #DDECD7;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+#spinningWheel {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.maxTekensText {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.triangle {
+    background-color: #3C3C3D;
+    text-align: left;
+    right: -10px;
+    position: absolute;
+    margin-top: 130px;
+}
+
+.triangle:before,
+.triangle:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+}
+
+.triangle,
+.triangle:before,
+.triangle:after {
+    width: 15px;
+    height: 15px;
+    border-top-right-radius: 40%;
+}
+
+.triangle {
+    transform: rotate(-30deg) skewX(-30deg) scale(1, .866);
+}
+
+.triangle:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+}
+
+.triangle:after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+}

@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3875DAA92428A3B90067363E /* accountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3875DAA82428A3B90067363E /* accountViewController.swift */; };
+		389F16BA244D9208004805D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 389F16B9244D9208004805D2 /* GoogleService-Info.plist */; };
+		38A5EE6A2448635800CE66B3 /* account.html in Resources */ = {isa = PBXBuildFile; fileRef = 38A5EE632448635700CE66B3 /* account.html */; };
+		38A5EE6B2448635800CE66B3 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 38A5EE642448635700CE66B3 /* images */; };
+		38A5EE6C2448635800CE66B3 /* inlogConfirm.html in Resources */ = {isa = PBXBuildFile; fileRef = 38A5EE652448635700CE66B3 /* inlogConfirm.html */; };
+		38A5EE6D2448635800CE66B3 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 38A5EE662448635700CE66B3 /* index.html */; };
+		38A5EE6E2448635800CE66B3 /* stylesheets in Resources */ = {isa = PBXBuildFile; fileRef = 38A5EE672448635700CE66B3 /* stylesheets */; };
+		38A5EE6F2448635800CE66B3 /* scripts in Resources */ = {isa = PBXBuildFile; fileRef = 38A5EE682448635700CE66B3 /* scripts */; };
+		38A5EE702448635800CE66B3 /* inlog.html in Resources */ = {isa = PBXBuildFile; fileRef = 38A5EE692448635800CE66B3 /* inlog.html */; };
+		38E88D522435E69500418F77 /* inlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E88D512435E69500418F77 /* inlogViewController.swift */; };
+		38FFC2262412862700762C31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FFC2252412862700762C31 /* AppDelegate.swift */; };
+		38FFC2282412862700762C31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FFC2272412862700762C31 /* SceneDelegate.swift */; };
+		38FFC22D2412862700762C31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FFC22B2412862700762C31 /* Main.storyboard */; };
+		38FFC22F2412862900762C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FFC22E2412862900762C31 /* Assets.xcassets */; };
+		38FFC2322412862900762C31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FFC2302412862900762C31 /* LaunchScreen.storyboard */; };
+		38FFC23A2412945200762C31 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FFC2392412945200762C31 /* homeViewController.swift */; };
+		45B358F4EE34AAEF687ACF42 /* libPods-DinnerTable.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3451E92F1E5FEFB4BCFC8D0E /* libPods-DinnerTable.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3451E92F1E5FEFB4BCFC8D0E /* libPods-DinnerTable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DinnerTable.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36E81D381181BFCA8CDD59CA /* Pods-DinnerTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinnerTable.release.xcconfig"; path = "Target Support Files/Pods-DinnerTable/Pods-DinnerTable.release.xcconfig"; sourceTree = "<group>"; };
+		3875DAA82428A3B90067363E /* accountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountViewController.swift; sourceTree = "<group>"; };
+		389F16B9244D9208004805D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		38A5EE632448635700CE66B3 /* account.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = account.html; path = ../../../DinnerTable/app/src/main/assets/account.html; sourceTree = "<group>"; };
+		38A5EE642448635700CE66B3 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = ../../../DinnerTable/app/src/main/assets/images; sourceTree = "<group>"; };
+		38A5EE652448635700CE66B3 /* inlogConfirm.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = inlogConfirm.html; path = ../../../DinnerTable/app/src/main/assets/inlogConfirm.html; sourceTree = "<group>"; };
+		38A5EE662448635700CE66B3 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = index.html; path = ../../../DinnerTable/app/src/main/assets/index.html; sourceTree = "<group>"; };
+		38A5EE672448635700CE66B3 /* stylesheets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = stylesheets; path = ../../../DinnerTable/app/src/main/assets/stylesheets; sourceTree = "<group>"; };
+		38A5EE682448635700CE66B3 /* scripts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = scripts; path = ../../../DinnerTable/app/src/main/assets/scripts; sourceTree = "<group>"; };
+		38A5EE692448635800CE66B3 /* inlog.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = inlog.html; path = ../../../DinnerTable/app/src/main/assets/inlog.html; sourceTree = "<group>"; };
+		38E88D512435E69500418F77 /* inlogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inlogViewController.swift; sourceTree = "<group>"; };
+		38FFC2222412862700762C31 /* DinnerTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinnerTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38FFC2252412862700762C31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38FFC2272412862700762C31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		38FFC22C2412862700762C31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38FFC22E2412862900762C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		38FFC2312412862900762C31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38FFC2332412862900762C31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38FFC2392412945200762C31 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		9C35D727D99B4DB1273E57AE /* Pods-DinnerTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinnerTable.debug.xcconfig"; path = "Target Support Files/Pods-DinnerTable/Pods-DinnerTable.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38FFC21F2412862700762C31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45B358F4EE34AAEF687ACF42 /* libPods-DinnerTable.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38FFC2192412862700762C31 = {
+			isa = PBXGroup;
+			children = (
+				38FFC2242412862700762C31 /* DinnerTable */,
+				38FFC2232412862700762C31 /* Products */,
+				E91C1843B4EB3A3FE679588F /* Pods */,
+				BD056987BE17AB15CA645B5E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		38FFC2232412862700762C31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38FFC2222412862700762C31 /* DinnerTable.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38FFC2242412862700762C31 /* DinnerTable */ = {
+			isa = PBXGroup;
+			children = (
+				38FFC2252412862700762C31 /* AppDelegate.swift */,
+				38FFC2272412862700762C31 /* SceneDelegate.swift */,
+				38FFC2392412945200762C31 /* homeViewController.swift */,
+				3875DAA82428A3B90067363E /* accountViewController.swift */,
+				38E88D512435E69500418F77 /* inlogViewController.swift */,
+				38FFC22B2412862700762C31 /* Main.storyboard */,
+				38FFC22E2412862900762C31 /* Assets.xcassets */,
+				38FFC2302412862900762C31 /* LaunchScreen.storyboard */,
+				389F16B9244D9208004805D2 /* GoogleService-Info.plist */,
+				38FFC2332412862900762C31 /* Info.plist */,
+				38A5EE632448635700CE66B3 /* account.html */,
+				38A5EE642448635700CE66B3 /* images */,
+				38A5EE662448635700CE66B3 /* index.html */,
+				38A5EE692448635800CE66B3 /* inlog.html */,
+				38A5EE652448635700CE66B3 /* inlogConfirm.html */,
+				38A5EE682448635700CE66B3 /* scripts */,
+				38A5EE672448635700CE66B3 /* stylesheets */,
+			);
+			path = DinnerTable;
+			sourceTree = "<group>";
+		};
+		BD056987BE17AB15CA645B5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3451E92F1E5FEFB4BCFC8D0E /* libPods-DinnerTable.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E91C1843B4EB3A3FE679588F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C35D727D99B4DB1273E57AE /* Pods-DinnerTable.debug.xcconfig */,
+				36E81D381181BFCA8CDD59CA /* Pods-DinnerTable.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38FFC2212412862700762C31 /* DinnerTable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38FFC2362412862900762C31 /* Build configuration list for PBXNativeTarget "DinnerTable" */;
+			buildPhases = (
+				CE38BF4986D9E5711516EA12 /* [CP] Check Pods Manifest.lock */,
+				38FFC21E2412862700762C31 /* Sources */,
+				38FFC21F2412862700762C31 /* Frameworks */,
+				38FFC2202412862700762C31 /* Resources */,
+				233C2816C00B047B2E6C4BA8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DinnerTable;
+			productName = DinnerTable;
+			productReference = 38FFC2222412862700762C31 /* DinnerTable.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38FFC21A2412862700762C31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = DinnerTable;
+				TargetAttributes = {
+					38FFC2212412862700762C31 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 38FFC21D2412862700762C31 /* Build configuration list for PBXProject "DinnerTable" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38FFC2192412862700762C31;
+			productRefGroup = 38FFC2232412862700762C31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38FFC2212412862700762C31 /* DinnerTable */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38FFC2202412862700762C31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38A5EE6E2448635800CE66B3 /* stylesheets in Resources */,
+				38A5EE6D2448635800CE66B3 /* index.html in Resources */,
+				38A5EE6B2448635800CE66B3 /* images in Resources */,
+				38A5EE6F2448635800CE66B3 /* scripts in Resources */,
+				38A5EE702448635800CE66B3 /* inlog.html in Resources */,
+				38A5EE6A2448635800CE66B3 /* account.html in Resources */,
+				38FFC2322412862900762C31 /* LaunchScreen.storyboard in Resources */,
+				38FFC22F2412862900762C31 /* Assets.xcassets in Resources */,
+				389F16BA244D9208004805D2 /* GoogleService-Info.plist in Resources */,
+				38FFC22D2412862700762C31 /* Main.storyboard in Resources */,
+				38A5EE6C2448635800CE66B3 /* inlogConfirm.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		233C2816C00B047B2E6C4BA8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DinnerTable/Pods-DinnerTable-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DinnerTable/Pods-DinnerTable-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DinnerTable/Pods-DinnerTable-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE38BF4986D9E5711516EA12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DinnerTable-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38FFC21E2412862700762C31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38FFC2262412862700762C31 /* AppDelegate.swift in Sources */,
+				38E88D522435E69500418F77 /* inlogViewController.swift in Sources */,
+				38FFC23A2412945200762C31 /* homeViewController.swift in Sources */,
+				3875DAA92428A3B90067363E /* accountViewController.swift in Sources */,
+				38FFC2282412862700762C31 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		38FFC22B2412862700762C31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38FFC22C2412862700762C31 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38FFC2302412862900762C31 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38FFC2312412862900762C31 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38FFC2342412862900762C31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		38FFC2352412862900762C31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38FFC2372412862900762C31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C35D727D99B4DB1273E57AE /* Pods-DinnerTable.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3DTKYM76P;
+				INFOPLIST_FILE = DinnerTable/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DinnerTable.DinnerTable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38FFC2382412862900762C31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36E81D381181BFCA8CDD59CA /* Pods-DinnerTable.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C3DTKYM76P;
+				INFOPLIST_FILE = DinnerTable/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DinnerTable.DinnerTable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38FFC21D2412862700762C31 /* Build configuration list for PBXProject "DinnerTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38FFC2342412862900762C31 /* Debug */,
+				38FFC2352412862900762C31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38FFC2362412862900762C31 /* Build configuration list for PBXNativeTarget "DinnerTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38FFC2372412862900762C31 /* Debug */,
+				38FFC2382412862900762C31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38FFC21A2412862700762C31 /* Project object */;
+}

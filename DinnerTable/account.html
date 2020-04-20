@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="stylesheets/account.css">
+    <link rel="stylesheet" href="stylesheets/header.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="profileImageContainer">
+        <img src="images/editIcon.png" alt="bewerken" class="editIcon" onclick="editInfo()">
+        <div class="profileImageDiv">
+            <img src="https://simpleicon.com/wp-content/uploads/account.png" alt="A picture of you" class="profileImage" name="profileImage">
+        </div>
+        <h2 class="userName">Tom Verkleij</h2>
+    </div>
+    <div class="userInfo" id="userInfo">
+        <div class="row">
+            <h2 class="titleInfo">Geboortedatum</h2>
+            <p class="descriptionInfo">5 april 2002</p>
+
+        </div>
+        <div class="row">
+            <h2 class="titleInfo">Email</h2>
+            <p class="descriptionInfo">tom.verkleij@student.hu.nl</p>
+        </div>
+        <div class="row">
+            <h2 class="titleInfo">Allergieën</h2>
+            <p class="descriptionInfo">Gluten</p>
+            <p class="descriptionInfo">Lactose</p>
+            <p class="descriptionInfo">Eieren</p>
+        </div>
+        <div class="row">
+            <h2 class="titleInfo">Eetvoorkeuren</h2>
+            <p class="descriptionInfo">Vegetarisch</p>
+        </div>
+    </div>
+    <div class="editInfoDivInvisible" id="editInfoDiv">
+        <div class="editProfileImageDiv">
+            <img src="https://simpleicon.com/wp-content/uploads/account.png" alt="A picture of you" class="editProfileImage" name="profileImage">
+            <p class="editProfileImageText">Wijzig profielfoto</p>
+        </div>
+
+        <div class="editInfoInputDiv">
+            <h2 class="editTitles">Gebruikersnaam</h2>
+            <input class="editInputs" type="text" name="" id="">
+            <h2 class="editTitles">Geboortedatum</h2>
+            <input class="editInputs" type="date" name="" id="">
+            <h2 class="editTitles">Email</h2>
+            <input class="editInputs" type="text" name="" id="">
+            <h2 class="editTitles">Allergieën</h2>
+            <input class="editInputs" type="text" name="" id="">
+            <h2 class="editTitles">Eetvoorkeuren</h2>
+            <input class="editInputs" type="text" name="" id="">
+
+        </div>
+
+        <div class="cancelSaveInfoDiv">
+            <input type="button" value="Annuleren" onclick="closeEditInfo()" class="cancelInfo">
+            <input type="button" value="Opslaan" onclick="closeEditInfo()" class="saveInfo">
+        </div>
+    </div>
+
+
+</body>
+<script src="scripts/account.js" defer></script>
+
+</html>

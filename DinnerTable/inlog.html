@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, inital-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="stylesheets/inlog.css">
+    <link rel="stylesheet" href="stylesheets/header.css">
+    <!-- <link rel="stylesheet" href="stylesheets/main.css"> -->
+</head>
+
+<body onload="loadBody()">
+    <div class="greenTopGone" id="greenTop">
+        <div class="square"></div>
+        <div class="circleGone" id="circle">
+            <div class="dinnerTableDivGone" id="dinnerTableDiv">
+                <label class="dinnerText">Dinner</label>
+                <label class="tableText">Table</label>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="contentDiv">
+        <div class="inlogPaginaDiv" id="inlogPaginaDiv">
+
+            <div class="inputDiv">
+                <img src="images/icons/emailIcon.png" class="inputIcon" alt="">
+                <input type="email" class="inputField" placeholder="Email">
+            </div>
+            <div class="inputDiv">
+                <img src="images/icons/keyIcon.png" class="inputIcon" alt="">
+                <input type="password" class="inputField" placeholder="Wachtwoord">
+            </div>
+
+            <button type="submit" class="inloggen">Inloggen</button><br>
+            <div class="accountSwitch">
+                <label class="changeLbl">Nog geen account?</label> <button id="registreerButton" onclick="changePage()">Registreer</button>
+            </div>
+        </div>
+
+        <div class="registreerPaginaDiv" id="registreerPaginaDiv">
+
+            <div class="inputDiv">
+                <img src="images/icons/nameIcon.png" class="inputIcon" alt="">
+                <input type="text" class="inputField" placeholder="Voor- en Achternaam">
+            </div>
+            <div class="inputDiv">
+                <img src="images/icons/emailIcon.png" class="inputIcon" alt="">
+                <input type="email" class="inputField" placeholder="Email">
+            </div>
+            <div class="inputDiv">
+                <img src="images/icons/bdayIcon.png" class="inputIcon" alt="">
+                <input type="date" class="inputField" id="date" style="color: grey;" oninput="datumChange()">
+            </div>
+            <div class="inputDiv">
+                <img src="images/icons/keyIcon.png" class="inputIcon" alt="">
+                <input type="password" class="inputField" placeholder="Wachtwoord">
+            </div>
+            <div class="inputDiv">
+                <img src="images/icons/keyIcon.png" class="inputIcon" alt="">
+                <input type="password" class="inputField" placeholder="Herhaal wachtwoord">
+            </div>
+
+            <button type="submit" class="registeren">Registreren</button><br>
+            <div class="accountSwitch">
+            <label class="changeLbl">Al een account? </label><button id="inlogButton" onclick="changePage()">Inloggen</button>
+        </div>
+        </div>
+    </div>
+
+
+
+    <script src="scripts/inlog.js" defer></script>
+</body>
+
+</html>

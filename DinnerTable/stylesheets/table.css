@@ -1,0 +1,49 @@
+.gerechtenText{
+    margin-top: 10px;
+}
+.datumText{
+    margin-top: 60px;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+.row{
+    /* height: 50px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 3%;
+}
+
+.tastyHealthyDiv{
+    width: 40px;
+    padding: 0;
+    text-align: center;
+    line-height: 10px;
+}
+
+.tastyHealthyText, .tastyHealthyNumber{
+    font-size: 11px;
+    color: #3C3C3D;
+    
+}
+
+.tastyHealthyNumber{
+    color: #969696;
+}
+
+.tableButton{
+    background-color: #8CCA73;
+    border-radius: 10px;
+    height: 20px;
+    font-size: 9px;
+    margin-bottom: 2px;
+    width: 110%;
+    color: white;
+}
+
+.tryThis{
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
