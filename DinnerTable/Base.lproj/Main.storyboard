@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="kOv-iG-8aR" customClass="accountViewController" customModule="DinnerTable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F4m-mT-tSi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ec4-mr-RH4">
@@ -49,7 +49,7 @@
                                 </constraints>
                             </view>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L37-Z6-ZVw">
-                                <rect key="frame" x="0.0" y="52" width="375" height="546"/>
+                                <rect key="frame" x="0.0" y="52" width="375" height="566"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -83,7 +83,7 @@
             <objects>
                 <viewController id="wtk-U9-mGQ" userLabel="Item 4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ajh-t8-e1h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84F-yu-OiW">
@@ -139,11 +139,11 @@
             <objects>
                 <viewController id="IKs-Zz-HOW" customClass="homeViewController" customModule="DinnerTable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nYz-OI-0hD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQ0-YB-foG">
-                                <rect key="frame" x="0.0" y="52" width="375" height="546"/>
+                                <rect key="frame" x="0.0" y="52" width="375" height="566"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -211,7 +211,7 @@
             <objects>
                 <viewController id="9IK-kQ-LuI" userLabel="Item 3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ADd-OY-h5d">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBR-nc-Nqx">
@@ -285,7 +285,7 @@
                                         </state>
                                         <connections>
                                             <action selector="signInSender:" destination="Vkd-xh-ws5" eventType="touchUpInside" id="KzZ-Eo-AEQ"/>
-                                            <segue destination="2sH-IC-6vq" kind="replace" splitViewControllerTargetIndex="1" id="euK-Wv-ztp"/>
+                                            <segue destination="2sH-IC-6vq" kind="presentation" modalPresentationStyle="fullScreen" id="euK-Wv-ztp"/>
                                         </connections>
                                     </button>
                                 </subviews>
