@@ -43,13 +43,13 @@ class inlogViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
             let app = UIApplication.shared
             let statusBarHeight: CGFloat = app.statusBarFrame.size.height
             
-            let statusbarView = UIView()	
+            let statusbarView = UIView()
             statusbarView.backgroundColor = hexStringToUIColor(hex: "8CCA73")
             view.addSubview(statusbarView)
           
             statusbarView.translatesAutoresizingMaskIntoConstraints = false
             statusbarView.heightAnchor
-                .constraint(equalToConstant: statusBarHeight).isActive = true
+              .constraint(equalToConstant: statusBarHeight).isActive = true
             statusbarView.widthAnchor
                 .constraint(equalTo: view.widthAnchor, multiplier: 1.0).isActive = true
             statusbarView.topAnchor
@@ -76,18 +76,16 @@ class inlogViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
         
         var error: NSError?
         GGLContext.sharedInstance()?.configureWithError(&error)
-        GIDSignIn.sharedInstance()?.uiDelegate = self
+        GIDSignIn.sharedInstance().delegate=self
+        GIDSignIn.sharedInstance().uiDelegate=self
         
     }
     @IBAction func signIn(sender: AnyObject) {
-          GIDSignIn.sharedInstance().delegate=self
-          GIDSignIn.sharedInstance().uiDelegate=self
-          GIDSignIn.sharedInstance().signIn()
+        GIDSignIn.sharedInstance().signIn()
     }
     @IBAction func signOut(sender: AnyObject) {
-          GIDSignIn.sharedInstance().delegate=self
-          GIDSignIn.sharedInstance().uiDelegate=self
-          GIDSignIn.sharedInstance().signOut()
+        GIDSignIn.sharedInstance().signOut()
+        
     }
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
     }

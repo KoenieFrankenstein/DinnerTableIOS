@@ -14,30 +14,29 @@ class homeViewController: UIViewController {
     
     @IBOutlet var webview: WKWebView!
     
-    override func viewDidAppear(_ animated: Bool) {
-        
-        func hexStringToUIColor (hex:String) -> UIColor {
-            var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+    func hexStringToUIColor (hex:String) -> UIColor {
+        var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
-            if (cString.hasPrefix("#")) {
-                cString.remove(at: cString.startIndex)
-            }
-
-            if ((cString.count) != 6) {
-                return UIColor.gray
-            }
-
-            var rgbValue:UInt64 = 0
-            Scanner(string: cString).scanHexInt64(&rgbValue)
-
-            return UIColor(
-                red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-                green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-                blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-                alpha: CGFloat(1.0)
-            )
+        if (cString.hasPrefix("#")) {
+            cString.remove(at: cString.startIndex)
         }
-        
+
+        if ((cString.count) != 6) {
+            return UIColor.gray
+        }
+
+        var rgbValue:UInt64 = 0
+        Scanner(string: cString).scanHexInt64(&rgbValue)
+
+        return UIColor(
+            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         if #available(iOS 13.0, *) {
             let app = UIApplication.shared
             let statusBarHeight: CGFloat = app.statusBarFrame.size.height
@@ -48,7 +47,7 @@ class homeViewController: UIViewController {
           
             statusbarView.translatesAutoresizingMaskIntoConstraints = false
             statusbarView.heightAnchor
-                .constraint(equalToConstant: statusBarHeight).isActive = true
+              .constraint(equalToConstant: statusBarHeight).isActive = true
             statusbarView.widthAnchor
                 .constraint(equalTo: view.widthAnchor, multiplier: 1.0).isActive = true
             statusbarView.topAnchor

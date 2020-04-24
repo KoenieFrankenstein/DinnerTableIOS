@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, inital-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="stylesheets/inlog.css">
     <link rel="stylesheet" href="stylesheets/header.css">
     <!-- <link rel="stylesheet" href="stylesheets/main.css"> -->
@@ -10,7 +11,7 @@
 
 <body onload="loadBody()">
     <div class="greenTopGone" id="greenTop">
-        <div class="square"></div>
+        <div class="square" id="square"></div>
         <div class="circleGone" id="circle">
             <div class="dinnerTableDivGone" id="dinnerTableDiv">
                 <label class="dinnerText">Dinner</label>
@@ -20,7 +21,7 @@
         </div>
     </div>
 
-    <div class="contentDiv">
+    <div class="contentDivGone" id="contentDiv">
         <div class="inlogPaginaDiv" id="inlogPaginaDiv">
 
             <div class="inputDiv">
@@ -31,8 +32,8 @@
                 <img src="images/icons/keyIcon.png" class="inputIcon" alt="">
                 <input type="password" class="inputField" placeholder="Wachtwoord">
             </div>
-
-            <button type="submit" class="inloggen">Inloggen</button><br>
+            <p class="foutje" id="foutje1" style="display: none;">Log in met google a.u.b.</p>
+            <button class="inloggen" onclick="fout()">Inloggen</button><br>
             <div class="accountSwitch">
                 <label class="changeLbl">Nog geen account?</label> <button id="registreerButton" onclick="changePage()">Registreer</button>
             </div>
@@ -60,17 +61,14 @@
                 <img src="images/icons/keyIcon.png" class="inputIcon" alt="">
                 <input type="password" class="inputField" placeholder="Herhaal wachtwoord">
             </div>
-
-            <button type="submit" class="registeren">Registreren</button><br>
+            <p class="foutje" id="foutje2" style="display: none;">Log in met google a.u.b.</p>
+            <button class="registeren" onclick="fout2()">Registreren</button><br>
             <div class="accountSwitch">
             <label class="changeLbl">Al een account? </label><button id="inlogButton" onclick="changePage()">Inloggen</button>
         </div>
         </div>
     </div>
-
-
-
-    <script src="scripts/inlog.js" defer></script>
 </body>
+<script src="scripts/inlog.js" defer></script>
 
 </html>

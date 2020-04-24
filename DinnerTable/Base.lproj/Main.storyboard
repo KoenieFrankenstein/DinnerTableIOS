@@ -142,14 +142,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQ0-YB-foG">
-                                <rect key="frame" x="0.0" y="52" width="375" height="566"/>
-                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u9g-C8-rZu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
                                 <subviews>
@@ -183,6 +175,14 @@
                                     <constraint firstAttribute="height" constant="52" id="x9l-QJ-Uo2"/>
                                 </constraints>
                             </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQ0-YB-foG">
+                                <rect key="frame" x="0.0" y="52" width="375" height="566"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <color key="backgroundColor" red="0.54901960780000003" green="0.79215686269999996" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -274,7 +274,7 @@
                                 <rect key="frame" x="0.0" y="597" width="375" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKU-7j-XyQ">
-                                        <rect key="frame" x="67.5" y="15" width="240" height="40"/>
+                                        <rect key="frame" x="25" y="15" width="240" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="240" id="1mp-oT-8kv"/>
                                             <constraint firstAttribute="height" constant="40" id="Omr-dw-ZYq"/>
@@ -288,11 +288,24 @@
                                             <segue destination="2sH-IC-6vq" kind="presentation" modalPresentationStyle="fullScreen" id="euK-Wv-ztp"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkZ-1y-b5R">
+                                        <rect key="frame" x="310" y="15" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4VA-Cq-4sV"/>
+                                            <constraint firstAttribute="width" constant="40" id="mWD-Fa-IKO"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Octicons-sign-out.svg"/>
+                                        <connections>
+                                            <action selector="signOutWithSender:" destination="Vkd-xh-ws5" eventType="touchUpInside" id="Kca-lB-pGN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="xkZ-1y-b5R" secondAttribute="trailing" constant="25" id="9Y9-uy-14S"/>
+                                    <constraint firstItem="xkZ-1y-b5R" firstAttribute="centerY" secondItem="4aF-0t-Pwz" secondAttribute="centerY" id="CFm-GJ-G3Q"/>
                                     <constraint firstAttribute="height" constant="70" id="EIz-Nc-at1"/>
-                                    <constraint firstItem="CKU-7j-XyQ" firstAttribute="centerX" secondItem="4aF-0t-Pwz" secondAttribute="centerX" id="Ssi-DU-aXz"/>
+                                    <constraint firstItem="CKU-7j-XyQ" firstAttribute="leading" secondItem="4aF-0t-Pwz" secondAttribute="leading" constant="25" id="Yq2-ve-5oZ"/>
                                     <constraint firstItem="CKU-7j-XyQ" firstAttribute="centerY" secondItem="4aF-0t-Pwz" secondAttribute="centerY" id="cVs-WI-tFS"/>
                                 </constraints>
                             </view>
@@ -348,6 +361,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Octicons-sign-out.svg" width="768" height="768"/>
         <image name="chart.bar.fill" catalog="system" width="128" height="89"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="googleSignInButton" width="512" height="94"/>

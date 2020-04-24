@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, inital-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" type="text/css" href="stylesheets/alleGerechten.css">
     <link rel="stylesheet" href="stylesheets/suggesties.css">
     <link rel="stylesheet" href="stylesheets/table.css">
@@ -10,7 +11,7 @@
 </head>
 <!--    TODO: 3 random gerechten uit de database automatisch in het rad zetten
         TODO: Slots anders verwoorden
-        TODO: Suggesties image left&right een extra margin ofzo toevoegen. 
+        TODO: Suggesties image left&right een extra margin ofzo toevoegen.
         (dan kan je zorgen dat de buitenste ook in t midden staan)
         TODO: IOS
         TODO: Back-end anders inrichten (kotlin)
@@ -26,10 +27,31 @@
         <div class="gerechten" id="gerechten" style="display: none;">
             <!-- gerechten pagina-->
             <div class="line">
-                <div class="search">
+                <div class="row">
                     <input type="text" id="searchField" class="searchBar" placeholder="Zoek een gerecht">
                     <img src="images/plusBtn.png" alt="plus knop" class="addFoodBtn" id="addFoodBtn" onclick="addFood()">
                 </div>
+            </div>
+            <div id="sortingDiv" class="row sortingDiv">
+                <table>
+                    <tr>
+                        <td>
+                            <h5 class="sortTitle">Gerechten sorteren</h5>
+                        </td>
+                        <td>
+                            <select name="sortBy" id="sortBy" class="sorting" onchange="getDatabase()">
+                                <option value="alfabetisch">Alfabetisch</option>
+                                <option value="laatst gegeten" selected>Laatst gegeten</option>
+                                <option value="langst niet gegeten">Langst niet gegeten</option>
+                                <option value="meest gezond">Meest gezond</option>
+                                <option value="minst gezond">Minst gezond</option>
+                                <option value="meest lekker">Meest lekker</option>
+                                <option value="minst lekker">Minst lekker</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+
             </div>
             <div class="tableDiv">
                 <!-- <table class="gerechtenLijst"></table> -->
@@ -198,6 +220,12 @@
         var database = firebase.database();
         //Get a reference to the firestore service
         var db = firebase.firestore()
+
+        if (typeof Android != 'undefined') {
+            var userID = Android.getUserID()
+        } else {
+            var userID = "Ai1ogLVEz1sQuFxpkWYd"
+        }
     </script>
     <!--!! end of firebase stuff  -->
 </body>
