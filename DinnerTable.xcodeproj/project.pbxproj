@@ -23,11 +23,11 @@
 		38FFC22F2412862900762C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38FFC22E2412862900762C31 /* Assets.xcassets */; };
 		38FFC2322412862900762C31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38FFC2302412862900762C31 /* LaunchScreen.storyboard */; };
 		38FFC23A2412945200762C31 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FFC2392412945200762C31 /* homeViewController.swift */; };
-		45B358F4EE34AAEF687ACF42 /* libPods-DinnerTable.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3451E92F1E5FEFB4BCFC8D0E /* libPods-DinnerTable.a */; };
+		E5F369647E3F4352165A78C5 /* Pods_DinnerTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F901CE02CCF93D4FA2D43F9 /* Pods_DinnerTable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3451E92F1E5FEFB4BCFC8D0E /* libPods-DinnerTable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DinnerTable.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F901CE02CCF93D4FA2D43F9 /* Pods_DinnerTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DinnerTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36E81D381181BFCA8CDD59CA /* Pods-DinnerTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DinnerTable.release.xcconfig"; path = "Target Support Files/Pods-DinnerTable/Pods-DinnerTable.release.xcconfig"; sourceTree = "<group>"; };
 		3875DAA82428A3B90067363E /* accountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = accountViewController.swift; sourceTree = "<group>"; };
 		389F16B9244D9208004805D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45B358F4EE34AAEF687ACF42 /* libPods-DinnerTable.a in Frameworks */,
+				E5F369647E3F4352165A78C5 /* Pods_DinnerTable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +107,7 @@
 		BD056987BE17AB15CA645B5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3451E92F1E5FEFB4BCFC8D0E /* libPods-DinnerTable.a */,
+				2F901CE02CCF93D4FA2D43F9 /* Pods_DinnerTable.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,6 +133,7 @@
 				38FFC21F2412862700762C31 /* Frameworks */,
 				38FFC2202412862700762C31 /* Resources */,
 				233C2816C00B047B2E6C4BA8 /* [CP] Copy Pods Resources */,
+				A812FE8C59623E941C6957F6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,6 +214,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DinnerTable/Pods-DinnerTable-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A812FE8C59623E941C6957F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DinnerTable/Pods-DinnerTable-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DinnerTable/Pods-DinnerTable-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DinnerTable/Pods-DinnerTable-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CE38BF4986D9E5711516EA12 /* [CP] Check Pods Manifest.lock */ = {

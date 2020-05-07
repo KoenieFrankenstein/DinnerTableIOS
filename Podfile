@@ -3,12 +3,15 @@
 
 target 'DinnerTable' do
   # Comment the next line if you don't want to use dynamic frameworks
-  # use_frameworks!
+  use_frameworks!
 
   # Pods for DinnerTable
 
-pod 'Firebase'
 pod 'Firebase/Analytics'
-pod 'Google/SignIn'
+
+pod 'Firebase'
+pod 'Firebase/Core'
+pod 'Firebase/Auth'
+pod 'GoogleSignIn'
 
 end

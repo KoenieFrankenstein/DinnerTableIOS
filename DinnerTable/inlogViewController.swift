@@ -8,10 +8,11 @@
 
 import WebKit
 import UIKit
-import Google
+import Firebase
+import FirebaseAuth
 import GoogleSignIn
 
-class inlogViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
+class inlogViewController: UIViewController, GIDSignInDelegate {
     
     @IBOutlet var webview: WKWebView!
     
@@ -74,19 +75,47 @@ class inlogViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
         
         webview.load(request)
         
-        var error: NSError?
-        GGLContext.sharedInstance()?.configureWithError(&error)
-        GIDSignIn.sharedInstance().delegate=self
-        GIDSignIn.sharedInstance().uiDelegate=self
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+//        GIDSignIn.sharedInstance().signIn()
         
+        
+//        var error: NSError?
+//        GGLContext.sharedInstance()?.configureWithError(&error)
+//        GIDSignIn.sharedInstance().delegate=self
+//        GIDSignIn.sharedInstance().uiDelegate=self
+//
     }
     @IBAction func signIn(sender: AnyObject) {
-        GIDSignIn.sharedInstance().signIn()
+       //customize google button
+        print("SIGN IN")
+        
     }
     @IBAction func signOut(sender: AnyObject) {
         GIDSignIn.sharedInstance().signOut()
-        
+        print("SIGNOUT SUCCES")
+
     }
+    
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print("SIGNIN SUCCES?")
+        
+        func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+          // ...
+            print("V111")
+          if let error = error {
+            // ...
+            print("V222")
+            return
+          }
+
+          guard let authentication = user.authentication else { return }
+          let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                            accessToken: authentication.accessToken)
+          // ...
+            print("V333")
+        }
     }
+    
+    
 }

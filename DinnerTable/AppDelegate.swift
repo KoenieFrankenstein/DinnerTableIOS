@@ -7,8 +7,9 @@
 //
 
 import UIKit
-import FirebaseCore
 import Firebase
+import FirebaseCore
+import FirebaseAuth
 import GoogleSignIn
 
 @UIApplicationMain
@@ -22,10 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         UITabBar.appearance().barTintColor = .white
         UITabBar.appearance().tintColor = UIColor.darkGray
         
-        GIDSignIn.sharedInstance().clientID = "297554476203-80c2ljbp0nm00j90p3qd5ltauqmp27ei.apps.googleusercontent.com"
+        FirebaseApp.configure()
+        
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         
-        FIRApp.configure()
         return true
     }
 
@@ -43,23 +45,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-          if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
-            print("The user has not signed in before or they have since signed out.")
-          } else {
-            print("\(error.localizedDescription)")
-          }
-          return
-        }
-        // Perform any operations on signed in user here.
-    }
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
-              withError error: Error!) {
-      // Perform any operations when the user disconnects from app here.
+    
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
       // ...
+        print("DDD111")
+      if let error = error {
+        // ...
+        print("DDD222")
+        return
+      }
+
+      guard let authentication = user.authentication else { return }
+      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                        accessToken: authentication.accessToken)
+      // ...
+        print("DDD333")
     }
 
-
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
+        print("DDD444")
+    }
 }
 
